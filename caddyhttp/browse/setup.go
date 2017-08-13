@@ -452,7 +452,7 @@ footer {
 
 			function filter() {
 				var q = filterEl.value.trim().toLowerCase();
-				var elems = document.querySelectorAll('tr.file');
+				var elems = [].slice.call(document.querySelectorAll('tr.file'));
 				elems.forEach(function(el) {
 					if (!q) {
 						el.style.display = '';
